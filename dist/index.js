@@ -1328,7 +1328,7 @@ var TelegramClient = class {
     return true;
   }
   setupMessageHandlers() {
-    elizaLogger2.log("Setting up message handler...");
+    elizaLogger2.log("AXR Setting up message handler...");
     this.bot.on(message("new_chat_members"), async (ctx) => {
       try {
         const newMembers = ctx.message.new_chat_members;
@@ -5477,6 +5477,7 @@ var z = /* @__PURE__ */ Object.freeze({
 });
 
 // src/environment.ts
+import { z } from "zod";
 var telegramEnvSchema = z.object({
   TELEGRAM_BOT_TOKEN: z.string().min(1, "Telegram bot token is required")
 });
