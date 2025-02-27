@@ -85,7 +85,7 @@ export class TelegramClient {
     }
 
     private setupMessageHandlers(): void {
-        elizaLogger.log("Setting up message handler...");
+        elizaLogger.log("AXR Setting up message handler...");
 
         this.bot.on(message("new_chat_members"), async (ctx) => {
             try {
@@ -197,7 +197,7 @@ export class TelegramClient {
 
     public async stop(): Promise<void> {
         elizaLogger.log("Stopping Telegram bot...");
-        //await 
+        //await
             this.bot.stop();
         elizaLogger.log("Telegram bot stopped");
     }
